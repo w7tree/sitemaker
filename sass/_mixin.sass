@@ -1,0 +1,33 @@
+=absolute($top: 0, $left: 0, $bottom: 0, $right: 0)
+  position: absolute
+  @if $top == bottom
+    bottom: $bottom
+  @else
+    top: $top
+  @if $left == right
+    right: $right
+  @else
+    left: $left
+
+=centering($width: 980px, $margin-top: 0, $margin-bottom: 0)
+  width: $width
+  margin: $margin-top auto $margin-bottom
+  text-align: left
+
+=anchor_set($color, $normal_underline: none, $hover_underline: underline, $second_color: dark)
+  color: $color
+  text-decoration: $normal_underline
+  &:visited
+    color: $color
+    text-decoration: $normal_underline
+  &:hover
+    @if $second_color == dark
+      color: darken($color, 15%)
+    @else if $second_color == light
+      color: lighten($color, 15%)
+    @else
+      color: $second_color
+    text-decoration: $hover_underline
+
+=serif
+  font-family: GTimes New Roman,Georgia,Verdana, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", 'MS PMincho', serif
