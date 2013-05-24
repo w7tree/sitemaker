@@ -4,6 +4,7 @@ TEMP=$_
 DIR=`echo $TEMP | sed -e s/sitemaker.sh$//`
 
 cp -r $DIR/* ./
+cp -r $DIR/.htaccess ./
 rm ./sitemaker.sh
 
 echo "Do you create wordpress theme?(y/n)"

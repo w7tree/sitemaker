@@ -1,0 +1,17 @@
+User-agent: *
+Crawl-delay: 30
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /wp-content/uploads/ps_auto_sitemap/
+Disallow: /readme.html
+Disallow: /readme-ja.html
+Disallow: /lisence.txt
+Disallow: /*?*
+Disallow: /*?
+Disallow: /*.php$
+
+User-agent: mediapartners-google
+Allow: /
+
+Sitemap: http://
