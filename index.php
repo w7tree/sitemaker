@@ -24,13 +24,16 @@ $seo = array(
   <meta name="description" content="<?php echo $seo['description']; ?>" />
   <meta name="keywords" content="<?php echo $seo['keywords']; ?>" />
   <link href="/favicon.ico" rel="shortcut icon">
-
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/style.css" type="text/css" media="screen and (min-width: 641px)" />
-  <!--[if (lt IE 9)&(!IEMobile)]>
-  <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="/sp.css" type="text/css" media="screen and (max-width:640px)" />
+  <meta name="viewport" content="width=device-width">
+  <?php if ( is_lt_IE8() ): ?>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+  <?php else: ?>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen and (min-width: 641px)" />
+    <link rel="stylesheet" href="/sp.css" type="text/css" media="screen and (max-width:640px)" />
+  <?php endif; ?>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="/js/common.js"></script>
